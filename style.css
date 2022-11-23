@@ -1,0 +1,164 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+*{
+  box-sizing: border-box;
+}
+
+nav>ul>li>a{
+  color: rgb(255, 0, 200);
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  display: inline;
+}
+
+@keyframes proba {
+  from {color: red;}
+  to {color: blue;}
+}
+
+header>h2{
+  text-align: center;
+  animation: proba 5s infinite;
+}
+
+button{
+  margin: 15px;
+  width: 85%;
+  border-color: red;
+  padding: 5px;
+  border-radius: 13px;
+  background-color: gray;
+  color: white;
+}
+
+main{
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "h h h"
+                       "n n n"
+                       "a a as"
+                       "f f f";
+  gap: 10px;
+}
+header, nav, article, footer, aside{
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+header{
+  grid-area:h;
+}
+nav{
+  grid-area:n;
+}
+article{
+  grid-area:a;
+}
+aside{
+  grid-area:as;
+}
+footer{
+  grid-area:f;
+}
+
+ul>li{
+  display: inline;
+  margin-right: 15px;
+}
+
+.aruk{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  width: 100%;
+
+}
+
+.aruk>div>img{
+  max-width: 250px;
+  max-height: 250px;
+  width: 100%;
+  height: auto; 
+  border-radius: 6px;      
+}
+
+aside>ul>li>p{
+  margin: 0px;
+  
+}
+
+@media screen and (max-width: 1285px)
+{
+    main
+    {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "h h h"
+                             "a a as"
+                             "n n n"
+                             "f f f";
+    }
+    .aruk{
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+    }
+    .aruk>div>img{
+      max-width: 250px;
+      max-height: 250px;
+      width: 100%;
+      height: auto;   
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+    main
+    {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+        grid-template-areas: "h h"
+                             "a as"
+                             "n n"
+                             "f f";
+    }
+    .aruk{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+    }
+    .aruk>div>img{
+      max-width: 250px;
+      max-height: 250px;
+      width: 100%;
+      height: auto;   
+    }
+}
+
+@media screen and (max-width: 525px)
+{
+    main
+    {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+        grid-template-areas: "h h"
+                             "a as"
+                             "n n"
+                             "f f";
+    }
+    .aruk{
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+    }
+    .aruk>div>img{
+      max-width: 250px;
+      max-height: 250px;
+      width: 100%;
+      height: auto;      
+    }
+}
